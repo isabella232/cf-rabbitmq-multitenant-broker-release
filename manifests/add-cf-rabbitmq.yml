@@ -19,6 +19,7 @@
           restart_statsdb_cron_schedule: "42 */4 * * *"
           plugins:
           - rabbitmq_management
+          - rabbitmq_prometheus
           - rabbitmq_mqtt
           - rabbitmq_stomp
           ports:
