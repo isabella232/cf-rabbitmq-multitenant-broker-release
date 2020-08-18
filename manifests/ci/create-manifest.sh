@@ -7,6 +7,7 @@ bosh interpolate --var deployment-name=cf-rabbitmq-multitenant-broker-release-ci
 	--ops-file=git-bosh-release/manifests/change-vcap-password.yml \
 	--ops-file=git-bosh-release/manifests/add-go-syslogd.yml \
 	--ops-file=git-bosh-release/manifests/add-syslog.yml \
+  --ops-file=git-bosh-release/manifests/add-bosh-dns-aliases.yml \
 	--ops-file=cf-rabbitmq-pipelines/manifests/ops-files/add-embedded-tests.yml \
 	--vars-file=cf-rabbitmq-pipelines/manifests/vars-files/cf-rabbitmq-vars.yml \
 	--vars-file=cf-rabbitmq-pipelines/manifests/vars-files/cf-rabbitmq-multitenant-broker-vars.yml \

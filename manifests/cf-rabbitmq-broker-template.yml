@@ -67,10 +67,10 @@ instance_groups:
           registration_interval: 20s
           uris:
           - ((rabbitmq-broker-hostname)).((system-domain))
-        routing_api:
-          client_cert: ((routing-api-client-cert))
-          client_private_key: ((routing-api-client-private-key))
-          server_ca_cert: ((routing-api-server-ca-cert))
+        # routing_api:
+          # client_cert: ((routing-api-client-cert))
+          # client_private_key: ((routing-api-client-private-key))
+          # server_ca_cert: ((routing-api-server-ca-cert))
   - name: bpm
     release: bpm
   - name: broker-registrar
@@ -79,7 +79,7 @@ instance_groups:
       cf:
         api_url: https://api.((system-domain))
         admin_username: ((cf-admin-username))
-        admin_password: ((cf-admin-password))
+        admin_password: ((/bosh-soarr/cf/cf-admin-password))
       broker:
         service:
           name: ((product-name))
